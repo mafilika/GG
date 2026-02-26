@@ -125,3 +125,40 @@
   }
 
 })();
+
+initWhatsAppForm();
+/* ===============================
+   WhatsApp Form Submission
+=============================== */
+function initWhatsAppForm() {
+  const form = document.getElementById("whatsapp-form");
+  if (!form) return;
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !phone || !service || !message) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    const whatsappMessage =
+      `*Gloss Guard Consultation Request*%0A%0A` +
+      `*Name:* ${name}%0A` +
+      `*Phone:* ${phone}%0A` +
+      `*Email:* ${email || "Not provided"}%0A` +
+      `*Service:* ${service}%0A%0A` +
+      `*Project Details:*%0A${message}`;
+
+    const whatsappURL =
+      `https://wa.me/27832269197?text=${whatsappMessage}`;
+
+    window.open(whatsappURL, "_blank");
+  });
+}
