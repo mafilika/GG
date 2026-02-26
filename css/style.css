@@ -317,3 +317,8 @@ textarea:focus {
   outline: none;
   border-color: var(--accent-metal);
    }
+
+.logo svg {
+  height: 70px;
+  width: auto;
+}
