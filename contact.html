@@ -25,14 +25,45 @@
 </header>
 
 <section class="container reveal">
-  <h1>Contact Us</h1>
-  <p>Phone: +27 83 226 9197</p>
-  <p>Email: admin@glossguard.co.za</p>
-  <p>Company Reg: 2025 / 921883 / 07</p>
+  <h1>Request a Consultation</h1>
 
-  <a href="https://wa.me/27832269197" class="cta-btn">
-    Book Directly on WhatsApp
-  </a>
+<form id="whatsapp-form" class="contact-form">
+
+  <div class="form-group">
+    <label for="name">Full Name *</label>
+    <input type="text" id="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone Number *</label>
+    <input type="tel" id="phone" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" id="email">
+  </div>
+
+  <div class="form-group">
+    <label for="service">Service Required *</label>
+    <select id="service" required>
+      <option value="">Select Service</option>
+      <option>Consulting & Specification</option>
+      <option>Interior & Exterior Wall Painting</option>
+      <option>Waterproofing Solutions</option>
+      <option>Corrosion Protection</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Project Details *</label>
+    <textarea id="message" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" class="cta-btn">Submit via WhatsApp</button>
+
+</form>
+  
 </section>
 
 <footer>
